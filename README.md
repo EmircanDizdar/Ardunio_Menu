@@ -12,5 +12,5 @@ https://github.com/johnrickman/LiquidCrystal_I2C
 
 Ürünün Özellikleri
 - Programın tanıtım yazısı ile açılmaktadır.
-- Program şimdilik 2 menü göstermektedir.
+- Program switch case yapısıyla birden fazla (ayarlanması gerekiyor) menü göstermektedir.
 - Her 5 saniyede üst menü değişmektedir.
