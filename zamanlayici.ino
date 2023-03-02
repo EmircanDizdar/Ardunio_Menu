@@ -1,6 +1,4 @@
 #include <LiquidCrystal_I2C.h>
-//menu donduren sayac
-
 int menu = 1;
 int saniye = 0;
 int dakika = 0;
@@ -13,59 +11,71 @@ void setup() {
   lcd.setCursor(0, 0);
   lcd.print("GITHUB SAYAC");
   lcd.setCursor(0, 1);
-  lcd.print("ARDUNIO LCD");
+  lcd.print("ARDUNIO SAYAC");
   delay(5000);
   lcd.clear();
+  Serial.begin(9600);
 }
 
 void loop() {
+  /*
+  Serial.print(menu);
+  Serial.print(" ");
+  Serial.print(saniye);
+  Serial.println("");
+  */
 
+  switch (menu) {
+    case 1:
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Total Sure");
+      lcd.setCursor(0, 1);
+      lcd.print(saat);
+      lcd.print("h:");
+      lcd.print(dakika);
+      lcd.print("m:");
+      lcd.print(saniye);
+      lcd.print("s");
+      lcd.setCursor(14, 0);
+      lcd.print("M1");
+      saniye = saniye + 1;
+      if (saniye % 5 == 0)
+        menu = menu + 1;
+      delay(1000);
+      break;
 
-  if (menu % 2 != 0) {
+    case 2:
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Sicaklik:");
+      lcd.setCursor(0, 1);
+      lcd.print(saat);
+      lcd.print("h:");
+      lcd.print(dakika);
+      lcd.print("m:");
+      lcd.print(saniye);
+      lcd.print("s");
+      lcd.setCursor(14, 0);
+      lcd.print("M2");
+      saniye = saniye + 1;
+      if (saniye % 5 == 0)
+        menu = menu + 1;
+      delay(1000);
+      break;
 
-    lcd.setCursor(0, 0);
-    lcd.print("Total Sure");
-    lcd.setCursor(0, 1);
-    lcd.print(saat);
-    lcd.print("h:");
-    lcd.print(dakika);
-    lcd.print("m:");
-    lcd.print(saniye);
-    lcd.print("s");
-    lcd.setCursor(14, 0);
-    lcd.print("M1");
-    saniye = saniye + 1;
+    default:
+      menu = 1;
+
+      if (saniye == 60) {
+        dakika = dakika + 1;
+        saniye = 0;
+        if (dakika == 60) {
+          saat = saat + 1;
+          dakika = 0;
+        }
+      }
   }
 
-  else if (menu % 2 == 0) {
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("Sicaklik:");
-    lcd.setCursor(0, 1);
-    lcd.print(saat);
-    lcd.print("h:");
-    lcd.print(dakika);
-    lcd.print("m:");
-    lcd.print(saniye);
-    lcd.print("s");
-    lcd.setCursor(14, 0);
-    lcd.print("M2");
-    saniye = saniye + 1;
-  }
-
-  if (saniye == 60) {
-    saniye = 0;
-    dakika = dakika + 1;
-    if (dakika == 60) {
-      dakika = 0;
-      saat = saat + 1;
-    }
-  }
-
-  if (saniye % 5 == 0) {
-    menu = menu + 1;
-  }
-
-  delay(1000);
   lcd.clear();
 }
