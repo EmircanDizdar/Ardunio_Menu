@@ -1,5 +1,5 @@
 # Ardunio_Menu
-Ardunio Uno Klon ile 16x2 lik ve arkasında I2C dönüştürücüsü HW-061 olan modüllerle basit bir menu yapımı
+Ardunio Uno Klon ile 16x2 lik LCD ve arkasında I2C dönüştürücüsü HW-061 olan modüllerle basit bir menu yapımı
 
 Kullanılan ürünler sırayla
 - Ardunio Uno R3 Klon
@@ -11,3 +11,7 @@ https://github.com/johnrickman/LiquidCrystal_I2C
 
 İlk başta kullanılacak ürünün göstergelerini gösterdikten sonra her 5 saniye de bir üst bölümdeki menünün sıraları değişmektedir (bu bölümler farazi olup daha sonrasında eklenecektir.). Alttaki sayaç ise her saniye başına işleyip kullanıcıya bilgi vermek amacıyla oluşturulmuştur.
 
+Ürünün Özellikleri
+-Programın tanıtım yazısı ile açılmaktadır.
+-Program şimdilik 2 menü göstermektedir.
+-Her 5 saniyede üst menü değişmektedir.
