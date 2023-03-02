@@ -8,3 +8,6 @@ Kullanılan ürünler sırayla
 
 Kullanılan library 
 https://github.com/johnrickman/LiquidCrystal_I2C
+
+İlk başta kullanılacak ürünün göstergelerini gösterdikten sonra her 5 saniye de bir üst bölümdeki menünün sıraları değişmektedir (bu bölümler farazi olup daha sonrasında eklenecektir.). Alttaki sayaç ise her saniye başına işleyip kullanıcıya bilgi vermek amacıyla oluşturulmuştur.
+
