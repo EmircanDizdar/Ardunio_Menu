@@ -12,6 +12,6 @@ https://github.com/johnrickman/LiquidCrystal_I2C
 İlk başta kullanılacak ürünün göstergelerini gösterdikten sonra her 5 saniye de bir üst bölümdeki menünün sıraları değişmektedir (bu bölümler farazi olup daha sonrasında eklenecektir.). Alttaki sayaç ise her saniye başına işleyip kullanıcıya bilgi vermek amacıyla oluşturulmuştur.
 
 Ürünün Özellikleri
--Programın tanıtım yazısı ile açılmaktadır.
--Program şimdilik 2 menü göstermektedir.
--Her 5 saniyede üst menü değişmektedir.
+- Programın tanıtım yazısı ile açılmaktadır.
+- Program şimdilik 2 menü göstermektedir.
+- Her 5 saniyede üst menü değişmektedir.
