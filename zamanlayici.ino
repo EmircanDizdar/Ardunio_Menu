@@ -11,9 +11,9 @@ void setup() {
   lcd.begin(16, 2);
   lcd.backlight();
   lcd.setCursor(0, 0);
-  lcd.print("ERCELLIANCE V0.1");
+  lcd.print("GITHUB SAYAC");
   lcd.setCursor(0, 1);
-  lcd.print("ERC-OK1B");
+  lcd.print("ARDUNIO LCD");
   delay(5000);
   lcd.clear();
 }
